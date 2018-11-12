@@ -1,0 +1,12 @@
+table {
+    width: 100%;
+}
+  
+th.mat-sort-header-sorted {
+color: black;
+}
+
+.table-div {
+    height: calc(100vh - 270px);
+    overflow-y: scroll;
+}

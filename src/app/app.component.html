@@ -1,0 +1,28 @@
+<!-- <div class="container-fluid"> -->
+  <div class="row">
+    <div class="col-md-12">
+      <mat-toolbar color="primary">
+        <span>Accounting</span>
+
+        <!-- This fills the remaining space of the current row -->
+        <span class="example-fill-remaining-space"></span>
+
+        <span></span>
+      </mat-toolbar>
+    </div>
+    <div class="col-md-2">
+      <mat-nav-list role="navigation">
+        <mat-list-item *ngFor="let link of links" [routerLink]="link.route">
+           <a matLine>{{ link.link }}</a>
+            <mat-icon>{{link.icon}}</mat-icon>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+    <div class="col-md-10 outlet">
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->

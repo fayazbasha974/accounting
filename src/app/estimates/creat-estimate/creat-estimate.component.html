@@ -1,0 +1,86 @@
+<h2>Add an Estimate</h2>
+<div class="row">
+  <!-- <form class="example-form"> -->
+  <div class="col-md-3">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Estimate" value="">
+    </mat-form-field>
+  </div>
+  <div class="col-md-3">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Number" value="">
+    </mat-form-field>
+  </div>
+  <div class="col-md-6"></div>
+  <!-- </form> -->
+</div>
+<!-- <mat-divider></mat-divider> -->
+<div class="row">
+  <div class="col-md-4">
+    <mat-form-field class="full-width">
+      <input type="text" placeholder="Choose Customer" aria-label="Number" matInput [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of options" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+  <div class="col-md-4">
+    <mat-form-field class="full-width">
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="col-md-4">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Sub Heading" value="">
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <mat-form-field class="full-width">
+      <input type="text" placeholder="Currency" aria-label="Number" matInput [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of options" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+  <div class="col-md-4">
+    <mat-form-field class="full-width">
+      <input matInput [matDatepicker]="datepicker" placeholder="Expires On">
+      <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+      <mat-datepicker #datepicker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="col-md-4">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Footer" value="">
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="PO/SO" value="">
+    </mat-form-field>
+  </div>
+  <div class="col-md-12">
+    <mat-form-field class="full-width">
+        <textarea matInput placeholder="Memo"></textarea>
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="row footer">
+    <div class="col-md-9"></div>
+    <div class="col-md-3">
+        <button mat-raised-button color="primary" routerLink="/estimates">Save</button>
+    </div>
+  </div>
